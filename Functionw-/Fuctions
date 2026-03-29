@@ -1,0 +1,30 @@
+ What it can actually do / Что она умеет?
+
+EN:
+* True Self-Booting: The OS boots itself! I wrote a custom 512-byte bootloader (`boot.asm`) that handles the jump from 16-bit BIOS to 32-bit Kernel. No GRUB, no Limine, no helper tools.
+*  VESA Graphics: Direct 800x600 16-bit color output. Every pixel is drawn by my own functions.
+*  Hardware Interaction: Reads raw data from the PS/2 mouse controller. The cursor moves!
+*  
+
+ RU:
+*  Честная загрузка: ОС загружается сама! Я написал собственный 512-байтовый загрузчик (`boot.asm`), который сам переходит из 16-битного BIOS в 32-битное ядро. Никаких GRUB, Limine или сторонних загрузчиков.
+*   VESA Графика: Прямой вывод 800x600 с 16-битным цветом. Каждый пиксель на экране рисуется моими функциями.
+*   Работа с железом: Чтение «сырых» данных от контроллера PS/2 мыши. Курсор реально двигается!
+*   
+Недостатки:
+EN:
+Outdated & Minimalist GUI: The interface is very basic and looks like something from the early 90s.
+Monolithic Code: All kernel logic is currently crammed into a single kernel.c file.
+No Power GUI: You can't shut down the PC via the "Start" menu yet; power commands only work through the keyboard.
+Auto-Reboot: The system might automatically reboot after about 5 minutes of operation.
+No Applications: There are no separate programs or apps to run yet.
+Missing Features: Most standard OS functions (like a filesystem or multitasking) are not yet implemented.
+Virtual Machine Only: WARNING! This OS is designed exclusively for virtual machines (QEMU). Do NOT run it on real hardware.
+RU:
+Устаревший и минималистичный GUI: Интерфейс очень простой и выглядит как привет из начала 90-х.
+Монолитный код: Вся логика ядра сейчас запихнута в один файл kernel.c.
+Нет управления питанием в GUI: Вы не сможете выключить ПК через меню «Пуск»; команды питания работают только через клавиатуру.
+Самопроизвольная перезагрузка: Система может сама уйти в ребут примерно через 5 минут работы.
+Отсутствие приложений: Отдельных программ или приложений пока просто нет.
+Нехватка функций: Большинство стандартных функций ОС (ФС, многозадачность) еще не реализованы.
+Только для виртуальных машин: ВНИМАНИЕ! Эта ОС создана исключительно для виртуальных машин (QEMU). НЕ запускайте её на реальных ПК.
